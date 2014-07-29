@@ -1,0 +1,215 @@
+@CHARSET "UTF-8";
+#property-map {
+    height: 400px;
+    width: 100%;
+}
+
+iframe {
+	border: 0px;
+	width: 100%
+}
+iframe.map {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	background-color: #fff;
+	margin: 0px 0px 20px 0px;
+	padding: 20px;
+	width: 100% !important
+}
+
+.marker {
+	-webkit-transition: margin-top 0.2s linear,padding-bottom 0.2s linear,opacity 0.2s linear;
+	-moz-transition: margin-top 0.2s linear,padding-bottom 0.2s linear,opacity 0.2s linear;
+	-o-transition: margin-top 0.2s linear,padding-bottom 0.2s linear,opacity 0.2s linear;
+	transition: margin-top 0.2s linear,padding-bottom 0.2s linear,opacity 0.2s linear;
+	background-image: url("../img/marker.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 42px 57px;
+	height: 57px;
+	opacity: 0.7;
+	width: 42px
+}
+.marker: hover {
+	margin-top: -10px;
+	padding-bottom: 10px;
+	opacity: .99
+}
+@media (-webkit-min-device-pixel-ratio:  2), (-moz-min-device-pixel-ratio:  2) {
+	.marker {
+	background-image: url("../img/markers/marker-blue@2x.png")
+}
+
+}
+
+.infobox:before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 8px;
+    bottom: -16px;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    width: 0;
+    z-index: 100;
+}
+.infobox:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.infobox {
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    width: 270px;
+    height: 100%;
+}
+.infobox .image {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px
+}
+
+
+.marker-info-win {
+    height: 100px;
+    margin-right: -20px;
+    max-width: 300px;
+}
+
+.marker-inner-win{
+	padding: 5px;
+}
+
+.info-content {
+	display: block;
+}
+
+
+.info-content .title {
+	border-bottom: 1px solid #CCCCCC;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+.info-content .title > h4 {
+    display: block;
+    margin: 0 auto;
+    width: 152px;
+}
+
+.infobox .title a: href {
+	text-decoration: none
+}
+.infobox .area {
+	color: #313131;
+	margin-top: 5px
+}
+.infobox .area .key {
+	float: left;
+	font-weight: bold
+}
+.infobox .price {
+	clear: left;
+	color: #313131;
+	float: left;
+	font-size: 18px;
+	margin-top: 8px
+}
+.infobox .link a {
+	-webkit-transition: background-color 0.2s ease-in;
+	-moz-transition: background-color 0.2s ease-in;
+	-o-transition: background-color 0.2s ease-in;
+	transition: background-color 0.2s ease-in;
+	background-image: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	background-color: #0581b5;
+	background-image: url("../img/arrow-right-white.png");
+	background-position: 90% center;
+	background-repeat: no-repeat;
+	background-size: 8px 11px;
+	border: 0px;
+	color: #fff;
+	padding: 7px 30px 7px 15px;
+	clear: right;
+	float: right
+}
+.infobox .link a: hover,.infobox .link a: active,.infobox .link a: focus {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none
+}
+@media (-webkit-min-device-pixel-ratio:  2), (-moz-min-device-pixel-ratio:  2) {
+	.infobox .link a {
+	background-image: url("../img/arrow-right-white@2x.png")
+}
+
+}
+.infobox .link a: hover {
+	background-color: #045e83
+}
+.infobox .link a a {
+	color: #fff
+}
+.infobox .link a: hover {
+	text-decoration: none
+}
+#map {
+	height: 485px;
+	width: 100%
+}
+#map img {
+	max-width: inherit
+}
+.map {
+	position: relative
+}
+.map .row {
+	position: relative
+}
+.map .row .span3 {
+	float: right;
+	margin-top: -450px;
+	z-index: 9999
+}
+@media (max-width:  767px) {
+	.map .row {
+	margin-left: 20px;
+	margin-right: 20px
+}
+.map .row .span3 {
+	float: none;
+	margin-top: 30px
+}
+
+}
+
+#property-map img {
+    max-width: none;
+}

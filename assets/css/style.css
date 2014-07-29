@@ -1,0 +1,326 @@
+@CHARSET "UTF-8";
+.image-upload {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    height: 330px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.upload-profile-picture {
+	display: inline-block;
+}
+
+.upload-picture {
+    display: block;
+    padding: 18px;
+}
+
+.upload-profile-picture > label:hover {
+	cursor: pointer;
+	border-color: #F59942;
+}
+
+.upload-profile-picture > label:before {
+    color: #CCCCCC;
+    content: attr(data-title);    
+    /*padding: 0px 8px*/;
+    display: block;
+    font-size: 13px;
+}
+
+.upload-profile-picture > label.cropped:before {
+	content: "";
+}
+
+.upload-profile-picture > label {
+   	border: 2px dashed #AAAAAA;
+    border-radius: 4px 4px 4px 4px;
+    /*height: 118px;
+    padding-top: 15px;
+    */position: relative;
+    text-align: center;
+    transition: all 0.15s ease 0s;
+    display: block;
+}
+
+.upload-profile-picture > label.cropped {
+	padding-top: 8px !important;
+	-moz-box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.upload-profile-picture span {
+    color: #CCCCCC;
+}
+
+.image-preview-container {
+	display: inline;
+}
+
+.image-download-preview {
+    display: inline;
+    height: auto;
+    padding: 33px 0;
+    position: relative;
+    text-align: center;
+    margin-right: 16px;
+}
+
+.image-upload-preview {
+    display: inline-block;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-right: 6px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 80px;
+}
+
+
+canvas {
+    display: block !important;
+    position: relative;
+    top: -54px;
+}
+
+.imm-picture {
+	display: inline-block;
+    /*max-width: 24%;*/
+    max-width: 16%;
+    padding: 0;
+}
+
+.remove {
+    background-color: #FFFFFF;
+    border: 3px solid #BBBBBB;
+    border-radius: 32px 32px 32px 32px;
+    color: red;
+    display: none;
+    font-size: 12px;
+    font-weight: normal;
+    height: 15px;
+    line-height: 12px;
+    position: absolute;
+    right: -11px;
+    text-align: center;
+    text-decoration: none;
+    top: -2px;
+    width: 15px;
+    transition: all 0.15s ease 0s;
+}
+
+.image-download-preview:hover {
+	cursor: pointer;
+}
+
+.image-download-preview:hover > a.remove {	
+	display: inline-block;
+}
+
+/*.upload-progress.progress.progress-striped.active {
+    border-radius: 0 0 0 0;
+    height: 12px;
+    left: 3px;
+    position: relative;
+    top: 96px;
+    width: 26%;
+    z-index: 1000;
+}*/
+
+
+.upload-progress.progress.progress-striped.active {
+    border-radius: 0 0 0 0;
+    height: 12px;
+    left: 3px;
+    position: relative;
+    top: 63px;
+    width: 93%;
+    z-index: 1000;
+}
+/*.upload-action {
+    background: none repeat scroll 0 0 white;
+    display: inline;
+    left: -59px;
+    padding: 2px 0 2px 4px;
+    position: relative;
+    top: -34px;
+}*/
+
+.upload-action {
+    background: none repeat scroll 0 0 white;
+    display: inline;
+    /*left: 3px;*/
+    padding: 2px 0 2px 4px;
+    position: relative;
+    /*top: 57px;*/
+    z-index: 1000;
+}
+
+.template-download .preview {
+    /*display: block;
+    height: 83px;*/
+    width: 80px;
+    height: 80px;
+}
+
+.btn-upload-start:hover, .btn-upload-cancel:hover {
+	text-decoration: none;
+}
+
+.select2-container {
+	width: 100%;
+}
+
+.select-agent {
+	width: 53%;
+}
+
+.select2-container .select2-choice, .select2-container .select2-choices{
+	border-radius: 0px;
+}
+
+.select2-container .select2-choice {
+    /*height: 40px;
+    line-height: 2;*/
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+    height: 0px;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {   
+    padding: 3px 5px 7px 18px;
+}
+
+.list-your-property-form form textarea {
+    -moz-box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+}
+
+.account ul li a {
+    color: #FFFFFF !important;
+}
+
+.account ul li a:hover {
+	color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.account ul.dropdown-menu li a {
+	color: #000000 !important;
+}
+
+.account .nav-pills .open .dropdown-toggle, .account .nav > li.dropdown.open.active > a:hover, .account .nav > li.dropdown.open.active > a:focus {
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
+}
+
+.ace-file-multiple label:before {
+    font-size: 14px;
+    margin: 12px 0 0 0;
+}
+
+
+.template-upload .crop canvas {
+    top: 0;
+}
+
+.upload-profile-picture.crop > label {
+    border: 1px dashed #AAAAAA;
+}
+
+.upload-profile-picture.crop {
+	display: block;
+}
+
+.remove {
+	font-size: 16px !important;
+}
+
+.upload-profile-picture.crop span {
+    font-size: 64px;
+    line-height: 64px;
+}
+
+a.fileinput-button:hover {
+	text-decoration: none;
+}
+
+.remove-cropped {
+    font-size: 17px !important;
+    position: relative !important;
+    right: -122px !important;
+    top: 20px !important;
+}
+
+a.remove-cropped:hover {
+	text-decoration: none;
+	color: red;
+}
+
+.upload-profile-picture.crop > label.cropped {
+	border: none !important;
+}
+
+.select2-container .select2-choice .select2-arrow b:before {
+    content: "";
+}
+
+
+.select2-dropdown-open .select2-choice .select2-arrow b:before {
+    content: "";
+}
+
+.select2-search:after {
+    content: "";
+}
+
+.select2-container .select2-choice abbr:before, .select2-search-choice-close:before {
+    content: "";
+}
+
+.control-group.error .select2-choices {
+    border-color: #F09784 !important;
+}
+
+.hide-map {
+	display: none !important;
+}
+
+.imagereduced{
+    height: 200px !important;
+}
+.slider-info{
+    top: 20px !important;
+    height: 100px !important;
+}
+.image-slider {
+    
+    width: 800px !important;
+}
+
+#inputPropertyNotes {
+	width: 95%;
+	height: 200px;
+}
+
+.admin-list-user img {
+    border: 1px solid #AAAAAA;
+    border-radius: 100% 100% 100% 100%;
+    max-width: none;
+    padding: 2px;
+    transition: all 0.1s ease 0s;
+    width: 40px;
+}
+
+#list_user_table td {
+	vertical-align: middle;
+}

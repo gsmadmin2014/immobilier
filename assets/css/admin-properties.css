@@ -1,0 +1,234 @@
+.properties-grid .property {
+	display: inline-block;
+	zoom: 1;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	background-color: #fff;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	position: relative
+}
+.properties-grid .property: after {
+	height: 0;
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden
+}
+.properties-grid .property .image {
+	overflow: hidden;
+	position: relative
+}
+.properties-grid .property .image a {
+	-webkit-transition: background-color 0.2s ease-in;
+	-moz-transition: background-color 0.2s ease-in;
+	-o-transition: background-color 0.2s ease-in;
+	transition: background-color 0.2s ease-in;
+	background-color: rgba(0,0,0,0);
+	display: block;
+	height: 100%;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 200
+}
+.properties-grid .property .image a: hover {
+	background-color: rgba(0,0,0,0.5);
+	background-image: url("../img/icons/eye.png");
+	background-position: center center;
+	background-repeat: no-repeat
+}
+.properties-grid .property .image img {
+	height: auto;
+	width: 100%
+}
+.properties-grid .property h2 {
+	line-height: 22px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px 15px
+}
+.properties-grid .property h2 a {
+	-webkit-transition: color 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in;
+	-o-transition: color 0.1s ease-in;
+	transition: color 0.1s ease-in;
+	color: #06a7ea;
+	font-size: 18px;
+	font-weight: normal
+}
+.properties-grid .property h2 a: hover {
+	color: #0584b8;
+	text-decoration: none
+}
+.properties-grid .property .location {
+	padding: 0px 15px
+}
+.properties-grid .property .price {
+	background-color: #fff;
+	color: #313131;
+	font-size: 18px;
+	padding: 5px 16px;
+	position: absolute;
+	right: 15px;
+	bottom: 15px
+}
+.properties-grid .property .reduced {
+	background-color: #313131;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px 16px;
+	position: absolute;
+	left: 15px;
+	bottom: 15px
+}
+.properties-grid .property .area {
+	color: #313131;
+	float: left;
+	margin-top: 8px
+}
+.properties-grid .property .area .key {
+	display: inline;
+	font-weight: bold;
+	padding: 0px 0px 0px 15px
+}
+.properties-grid .property .area .value {
+	display: inline
+}
+.properties-grid .property .bedrooms {
+	float: right;
+	margin-right: 10px;
+	padding-top: 8px
+}
+.properties-grid .property .bedrooms .content {
+	background-image: url("../img/icons/bedrooms.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 21px 12px;
+	color: #313131;
+	padding-left: 30px
+}
+@media (-webkit-min-device-pixel-ratio:  2), (-moz-min-device-pixel-ratio:  2) {
+	.properties-grid .property .bedrooms .content {
+	background-image: url("../img/icons/bedrooms@2x.png")
+}
+
+}
+.properties-grid .property .bathrooms {
+	float: right;
+	margin-right: 15px;
+	padding-top: 8px
+}
+.properties-grid .property .bathrooms .content {
+	background-image: url("../img/icons/bathrooms.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 14px 20px;
+	color: #313131;
+	padding-left: 25px
+}
+@media (-webkit-min-device-pixel-ratio:  2), (-moz-min-device-pixel-ratio:  2) {
+	.properties-grid .property .bathrooms .content {
+	background-image: url("../img/icons/bathrooms@2x.png")
+}
+
+}
+.properties-grid .property: nth-last-child(1),.properties-grid .property: nth-last-child(2),.properties-grid .property: nth-last-child(3) {
+	margin-bottom: 0px
+}
+@media (min-width:  768px) and (max-width:  1199px) {
+	.properties-grid .property .reduced,.properties-grid .property .price {
+	font-size: 14px;
+	padding: 5px 8px
+}
+
+}
+@media (min-width:  768px) and (max-width:  979px) {
+	.properties-grid .property .reduced,.properties-grid .property .price {
+	font-size: 11px;
+	padding: 5px 4px
+}
+.properties-grid .property h2 a {
+	font-size: 14px
+}
+.properties-grid .property .location {
+	font-size: 12px
+}
+.properties-grid .property .area {
+	float: none;
+	margin: 0px
+}
+.properties-grid .property .area,.properties-grid .property .bedrooms,.properties-grid .property .bathrooms {
+	font-size: 12px
+}
+.properties-grid .property .bedrooms,.properties-grid .property .bathrooms {
+	float: left;
+	margin-left: 16px
+}
+
+}
+@media (max-width:  767px) {
+	.properties-grid .property: nth-last-child(1),.properties-grid .property: nth-last-child(2),.properties-grid .property: nth-last-child(3) {
+	margin-bottom: 30px
+}
+.properties-grid .property: last-child {
+	margin-bottom: 0px
+}
+
+.property-detail {
+	background-color: #fff;
+	padding: 20px
+}
+.property-detail .overview {
+	border: 1px solid #b5b5b5;
+	margin: 0px 30px 10px 0px;
+	padding: 20px
+}
+.property-detail .overview h2 {
+	clear: both;
+	line-height: 1;
+	margin: 0px 0px 20px 0px
+}
+.property-detail .overview table th {
+	text-align: left;
+	padding-right: 15px
+}
+.property-detail #property-map {
+	height: 400px;
+	width: 100%
+}
+.property-detail #property-map img {
+	max-width: none
+}
+.property-detail ul {
+	list-style: none
+}
+.property-detail ul li.checked {
+	background-image: url("../img/icons/nike.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 11px 9px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	padding-top: 3px
+}
+@media (-webkit-min-device-pixel-ratio:  2), (-moz-min-device-pixel-ratio:  2) {
+	.property-detail ul li.checked {
+	background-image: url("../img/icons/nike@2x.png")
+}
+
+}
+.property-detail ul li.plain {
+	background-image: url("../img/icons/cross.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 11px 9px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	padding-top: 3px
+}
+@media (-webkit-min-device-pixel-ratio:  2), (-moz-min-device-pixel-ratio:  2) {
+	.property-detail ul li.plain {
+	background-image: url("../img/icons/cross@2x.png")
+}

@@ -349,21 +349,14 @@ CREATE TABLE IF NOT EXISTS `immo_message` (
   `immo_message_deleted` int(11) NOT NULL,
   `immo_message_viewed` int(11) NOT NULL,
   `immo_message_created` datetime NOT NULL,
+  `immo_message_immo_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`immo_message_id`),
-  KEY `IDX_557A8417115F86D2` (`immo_message_agent_id`)
+  KEY `IDX_557A8417115F86D2` (`immo_message_agent_id`),
+  KEY `IDX_557A841788EAFBF5` (`immo_message_immo_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Constraints for dumped tables
---
-
---
--- Constraints for table `immo_message`
---
-ALTER TABLE `immo_message`
-  ADD CONSTRAINT `FK_557A8417115F86D2` FOREIGN KEY (`immo_message_agent_id`) REFERENCES `immo_user` (`immo_us_id`) ON DELETE SET NULL;
-
-
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

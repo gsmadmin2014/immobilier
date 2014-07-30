@@ -25,6 +25,14 @@ class User_service
 		
 		$roleId = isset($data['role']) ? $data['role'] : 2;
 		$role = $this->em->getRepository('Entities\Role')->find($roleId);
+		
+		$agenceId = isset($data['agence']) ? $data['agence'] : 0;
+		if ($agenceId > 0) {
+			$agence = $this->em->getRepository('Entities\Agence')->find($agenceId);
+			if ($agence instanceof Entities\Agence) {
+				$user->setAgence($agence);
+			}
+		}
 
 		$phone1 = isset($data['phone1']) ? $data['phone1'] : '';
 		$phone2 = isset($data['phone2']) ? $data['phone2'] : '';

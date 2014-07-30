@@ -9,6 +9,7 @@ class User extends GSM_Controller
 		parent::__construct();
         $this->setLayoutView("layout");
         $this->load->service('user_service', 'user');
+        $this->load->service('agence_service', 'agence');
         $this->load->library('acl_auth');
 	}
 	
@@ -98,6 +99,7 @@ class User extends GSM_Controller
 		
         if ($isAdmin) {
         	$data['roles'] = $this->user->listRole();
+        	$data['agences'] = $this->agence->getAgencesList();
         	$this->setData($data);
 			$this->setContentView('admin/user_register');
 		} else {

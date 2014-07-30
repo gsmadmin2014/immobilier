@@ -74,10 +74,11 @@ class Immobilier extends GSM_Controller
      * detail immobilier
      */
      public function detailImmo($idimmo){
-        $immo=$this->is->getDetailImmo($idimmo);
-        $data['detimmo']=$immo;
-        $data['immo']=$this->is->getList(4,0);
-        $data['agent']=$this->user->getListUser(2,0,$immo['idagence']); 
+        $immo = $this->is->getDetailImmo($idimmo);
+        $data['detimmo'] = $immo;
+        $data['immo'] = $this->is->getList(4,0);
+        $data['agent'] = $this->user->getListUser(2,0,$immo['idagence']); 
+        $data['agents'] = $this->user->getListUser(0, 0, $immo['idagence']);
         
         $mapDetail = array(
         	'coords' => array('latitude' => $immo['latitude'], 'longitude' => $immo['longitude']),

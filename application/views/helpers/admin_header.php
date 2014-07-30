@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/ace/css/jquery.gritter.css" type="text/css">    
     <link rel="stylesheet" href="<?php echo base_url();?>assets/ace/css/bootstrap-editable.css" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link rel="stylesheet" href="<?php echo base_url('assets/ace/css/select2.css');?>">
 	<link rel="stylesheet" href="<?php echo base_url('assets/ace/css/ace.min.css');?>">
 	<link rel="stylesheet" href="<?php echo base_url('assets/ace/css/ace-responsive.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/ace/css/ace-skins.min.css');?>">
@@ -60,7 +61,7 @@
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/retina.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url('assets/select2/js/select2.min.js');?>"></script>
+    <!-- <script src="<?php echo base_url('assets/select2/js/select2.min.js');?>"></script>-->
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js/carousel.js"></script>
 <script src="<?php echo base_url();?>assets/ace/js/select2.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/libraries/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js"></script>

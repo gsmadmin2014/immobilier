@@ -324,3 +324,28 @@ a.remove-cropped:hover {
 #list_user_table td {
 	vertical-align: middle;
 }
+
+.contact select {
+    width: 108%;
+}
+
+.contact .chzn-container .chzn-single {
+    height: 32px;
+    line-height: 32px;
+}
+
+.loading-send-message {
+	margin-left: 15px;
+}
+
+.dropdown-navbar > li:last-child > a {
+   	color: #555555;
+    font-size: 12px;
+    text-align: left;
+}
+
+.dropdown-navbar > li:last-child.see-all > a {
+    color: #4F99C6;
+    font-size: 13px;
+    text-align: center;
+}

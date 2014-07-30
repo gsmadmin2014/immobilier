@@ -64,7 +64,7 @@ $autoload['libraries'] = array('session','gsm_function');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'user', 'immo','language');
+$autoload['helper'] = array('url', 'user', 'immo', 'language', 'message');
 
 
 /*

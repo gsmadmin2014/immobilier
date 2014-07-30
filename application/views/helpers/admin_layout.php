@@ -23,18 +23,62 @@
 
 					</ul>
 				</li>
-
+				<?php $listMessages = listMessageUser();
+					$count = 0;
+					$messages = array();
+					if (array_key_exists('count', $listMessages)) {
+						$count = $listMessages['count'];
+					}
+					if (array_key_exists('messages', $listMessages)) {
+						$messages = $listMessages['messages'];
+					}
+				 ?>
 				<li class="green">
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 						<i class="icon-envelope icon-animated-vertical"></i>
+						<?php if ($count > 0) { ?>
+							<span class="badge badge-success"><?php echo $count; ?></span>
+						<?php } ?>
 					</a>
 
 					<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
 						<li class="nav-header">
 							<i class="icon-envelope-alt"></i>
-							0 Messages
+							<?php if ($count > 0) {  echo $count;  } ?> Unread messages
 						</li>
-						
+						<?php if (isset($messages) && count($messages)) {
+							$i = 0;
+							foreach ($messages as $message) {
+								if ($i == 3) {
+									break;
+								}?>
+								<li>
+									<a href="#">
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue"><?php echo $message['sender']; ?>:</span>
+												<?php echo $message['content']; ?>
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span><?php echo $message['time']; ?></span>
+											</span>
+										</span>
+									</a>
+								</li>
+							<?php
+							$i++;
+							}
+							if ($i < count($messages)) {?>
+								<li class="see-all">
+									<a href="#">
+										See all messages
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							<?php }
+						}?>
 					</ul>
 				</li>
 

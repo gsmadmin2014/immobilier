@@ -139,6 +139,30 @@
 					</span>
 					<div class="clearfix"></div>
 					<?php } ?>
+					<?php if (isset($agences) && count($agences)) {?>
+					<div class="agence hide">
+					<div class="space"></div>
+                    <h4 class="header blue bolder smaller">Agence</h4>
+                    
+					
+					<span class="span5">
+					<div class="control-group">
+						<label for="agence" class="control-label">
+							Agence
+						</label>
+						<div class="controls">
+							<select name="agence" class="select-agence">
+								<option></option>
+								<?php foreach ($agences as $item) {?>
+								<option value="<?php echo $item['id']; ?>"><?php echo $item['name']; ?></option>
+								<?php }?>
+							</select>
+						</div>
+					</div>
+					</span>
+					<div class="clearfix"></div>
+					</div>
+					<?php } ?>
 					<div class="form-actions">
 						<button type="submit" class="btn btn-info">
 							<i class="icon-ok bigger-110"></i>
@@ -274,7 +298,6 @@ function format(item) { return item.text; };
 $(document).ready(function() {
 	if (BrowserDetect.browser == 'Firefox' && BrowserDetect.version <= 19) {
 		$(document).on("click",".gdn-file-input label", function(e) {
-			console.log("click");
 			if(e.currentTarget === this && e.target.nodeName !== 'INPUT') {
 		      	$(this.control).click();
 		    }
@@ -283,6 +306,20 @@ $(document).ready(function() {
 	var selectRole = $(".select-role").select2({
 		minimumResultsForSearch: 10, 
 		placeholder: 'Choose role',
+		allowClear: true
+	}).on('change', function(e) {
+		if (e.target == this) {
+			var roleId = e.val;
+			if (roleId == "3") {
+				$('.agence').removeClass('hide');
+			} else {
+				$('.agence').addClass('hide');
+			}
+		}
+	});
+	var selectAgence = $(".select-agence").select2({
+		minimumResultsForSearch: 10, 
+		placeholder: 'Choose agence',
 		allowClear: true
 	})
 	var showmodal = $('.show-modal').imageupload({

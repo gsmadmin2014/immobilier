@@ -57,6 +57,8 @@ $route['^(en|fr|jp|al)/not_authorized'] = 'pages/not_authorized';
 $route['^(en|fr|jp|al)/upload'] = 'upload/upload';
 $route['^(en|fr|jp|al)/crop'] = 'upload/upload/crop';
 
+$route['^(en|fr|jp|al)/message/send'] = 'message/message/send';
+
 $route['^(en|fr|jp|al)/agence/(.+)$'] = 'agence/agence/$2';
 $route['^(en|fr|jp|al)/admin/user/add'] = 'user/user/register/admin';
 $route['^(en|fr|jp|al)/admin/immobilier/add'] = 'immobilier/immobilier/add';

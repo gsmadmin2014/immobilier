@@ -4,7 +4,7 @@ class Message extends GSM_Controller
 	public function __construct()
 	{
 		parent::__construct();
-        $this->setLayoutView("layout");
+        $this->setLayoutView("layout_admin");
         $this->load->service("message_service","message");
 	}
 	
@@ -35,5 +35,14 @@ class Message extends GSM_Controller
             }
 		}
 		echo json_encode($data);
+	}
+	
+	public function listMessage()
+	{
+		$userId = get_session_value('user_id');
+		$data = array();
+		$data = $this->message->getUserMessage($userId);
+		$this->setData($data);
+		$this->setContentView('admin/list_message');	
 	}
 }

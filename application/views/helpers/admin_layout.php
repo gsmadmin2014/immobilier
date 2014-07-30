@@ -201,6 +201,12 @@
 					
 				</ul>
 			</li>
+			<li>
+				<a href="<?php echo site_url('message/list'); ?>">
+					<i class="icon-envelope-alt"></i>
+					<span class="menu-text"> Message </span>
+				</a>
+			</li>
             <?php if (has_role('admin')) { ?>
 			<li>
 				<a href="#" class="dropdown-toggle">

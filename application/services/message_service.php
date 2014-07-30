@@ -64,17 +64,23 @@ class Message_service
     		foreach ($messages as $message) {
     			$id = $message->getId();
     			$sender = $message->getName();
+    			$email = $message->getEmail();
     			$created = $message->getCreated();
     			$content = $message->getContent();
     			$viewed = $message->getViewed();
+    			$immobilier = $message->getImmobilier();
     			$time = $this->displayMoment($created);
 				
-    			array_push($result['messages'], array('id' => $id,
-    									'sender' => $sender,
-    									'created' => $created,
-    									'content' => $content,
-    									'viewed' => $viewed,
-    									'time' => $time
+    			array_push($result['messages'], 
+    				array(
+    					'id' => $id,
+    					'sender' => $sender,
+    					'created' => $created,
+    					'content' => $content,
+    					'viewed' => $viewed,
+    					'time' => $time,
+    					'email' => $email,
+    					'immobilier' => $immobilier
     				)
     			);
     			if ($viewed === 0) {

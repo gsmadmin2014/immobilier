@@ -58,6 +58,7 @@ $route['^(en|fr|jp|al)/upload'] = 'upload/upload';
 $route['^(en|fr|jp|al)/crop'] = 'upload/upload/crop';
 
 $route['^(en|fr|jp|al)/message/send'] = 'message/message/send';
+$route['^(en|fr|jp|al)/message/list'] = 'message/message/listMessage';
 
 $route['^(en|fr|jp|al)/agence/(.+)$'] = 'agence/agence/$2';
 $route['^(en|fr|jp|al)/admin/user/add'] = 'user/user/register/admin';
